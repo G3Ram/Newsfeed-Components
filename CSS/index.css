@@ -32,6 +32,7 @@
   height: 50px;
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
+  transition: all 1s;
 }
 .article h2 {
   font-size: 28px;
@@ -75,6 +76,7 @@
 }
 .article-open {
   height: 400px;
+  transition: all 1s;
 }
 .header {
   width: 100%;
