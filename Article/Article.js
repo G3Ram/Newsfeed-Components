@@ -9,10 +9,17 @@ class Article {
     // Using your expandButton reference, update the text on your expandButton to say "expand"
     this.expandButton.innerHTML = "Click to Expand";
 
+    //creating the close button for stretch
+    this.closeButton = document.createElement("button");
+    this.closeButton.setAttribute("class", "closeButton");
+    this.closeButton.innerHTML = "Close";
+    this.article.appendChild(this.closeButton);
+
     // Set a click handler on the expandButton reference, calling the expandArticle method.
     this.expandButton.addEventListener("click", () => this.expandArticle());
+    this.closeButton.addEventListener("click", () => this.closeArticle());
   }
-
+  // To expand the article
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
     if (this.expandButton.innerHTML === "Click to Expand") {
@@ -23,6 +30,11 @@ class Article {
     this.article.classList.toggle("article-open");
 
     //this.expandButton.classList.toggle("close");
+  }
+
+  // Stretch Exercise - To close the article once it is read. This should not be available to be displayed.
+  closeArticle() {
+    this.article.style.display = "none";
   }
 }
 
